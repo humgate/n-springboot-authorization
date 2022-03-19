@@ -1,5 +1,5 @@
-Springboot application demonstrating handling of different exceptions thrown in controller using
-@ExceptionHandler annotated methods (in the controller).
+Springboot application implementing the simplest authorization service and demonstrating handling 
+of different exceptions thrown in controller using @ExceptionHandler annotated methods.
 
 Three test users hardcoded in UserRepository for testing:
 
