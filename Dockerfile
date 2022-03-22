@@ -1,6 +1,6 @@
-# Our docker image will be based on openjdk:14-jdk-alpine image
-# The project is set up for JDK14, so lets take appropriate docker image.
-FROM openjdk:14-jdk-alpine
+# Our docker image will be based on openjdk:8-jdk-alpine image
+# Also chaged maven pom.xml project property to <java.version>1.8</java.version>
+FROM openjdk:8-jdk-alpine
 
 # Our docker container will expose 8080 port
 # Regardless of this, container needs to be run with -p 8080:8080 ports mapping option
