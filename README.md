@@ -1,5 +1,8 @@
 Springboot application implementing the simplest authorization service and demonstrating handling 
 of different exceptions thrown in controller using @ExceptionHandler annotated methods.
+Java version set to 8 to allow using application jar in Docker container based on openjdk:8-jdk-alpine.
+Dockerfile in project root describes docker image building.
+docker-compose.yml describes docker compose manifest.
 
 Three test users hardcoded in UserRepository for testing:
 
@@ -13,6 +16,3 @@ other requests to the authorization server application developed earlier (master
 added in the project root, authform.html located in resources. Tested ok on Ubuntu 20.04 with nginx.conf 
 configured to look for authorization page in the root of user home (/home/humgate)
 
-Java version set to 8 to allow using application jar in Docker container based on openjdk:8-jdk-alpine.
-Dockerfile in project root describes docker image building.
-docker-compose.yml describes docker compose manifest. 
