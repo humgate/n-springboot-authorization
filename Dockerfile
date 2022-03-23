@@ -8,14 +8,7 @@ EXPOSE 8080
 
 # Add our application jar to the image
 ADD target/springboot-authorization-0.0.1-SNAPSHOT.jar springbootauthapp
-# Command line for launching out application in container
+# Command line for launching our application in container
 
 #Command to launch the appliction in container
 ENTRYPOINT ["java","-jar","/springbootauthapp"]
-
-# Image build command from the folder containing this Dockerfile:
-# docker build -t humga/springbootapp .
-
-# Container launch command:
-# docker run -p 8080:8080 humga/springbootapp
-
