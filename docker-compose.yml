@@ -1,6 +1,21 @@
+# docker-compose yaml defining launch of two docker container using docker-compose
+# 1 - springbootapp builds according to Dockerfile and launches with 8080:8080 ports mapping
+# 2 - nginxserv builds from the image, binds host static pages' folder (containing authform.html) to nginx container
+# default static pages folder, binds project nginx-config folder (containing default.conf) ot nginx container default
+# config folder (conf.d).
+# Both binding commands in volumes directive do OVERWRITE all the files in corresponding container folder before
+# starting nginxserv service
 version: "3.9"  # optional since v1.27.0
 services:
   springbootapp:
     build: .
     ports:
       - "8080:8080"
+  nginxserv:
+    image: "nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src/main/resources/static:/usr/share/nginx/html
+      - ./nginx-config:/etc/nginx/conf.d
+

@@ -1,4 +1,4 @@
-@REM run command for nginx docker container launch in Docker on Windows host
+@REM run command for nginx docker container launching (on Windows host)
 @REM uses Windows cmd syntax
 @REM first -v binds host folder to container folder, so container can use static html files from it
 @REM second -v overwrites nginx container config (default.conf) with the hosts one
