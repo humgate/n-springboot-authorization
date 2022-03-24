@@ -4,7 +4,7 @@ of different exceptions thrown in controller using @ExceptionHandler annotated m
 Java version set to 8 to allow using application jar in customized Docker container based on openjdk:8-jdk-alpine.<br>
 Dockerfile in project root defines docker image building.
 To test (on Windows host):<br>
-1. Build application jar using maven clean package
+1. Build application jar using `maven clean package`
 2. Build spring application docker image by running the following command from the project root (folder 
 containing Dockerfile):<br>
 `docker build -t humga/springbootapp .`
